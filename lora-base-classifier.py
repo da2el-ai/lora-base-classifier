@@ -26,7 +26,7 @@ def getBaseModel(file_path):
     # 選択されたファイルを読み込んで "BaseModel" の内容を取得
     with open(info_file, 'r') as f:
         info_data = json.load(f)
-        return info_data.get("BaseModel", None)
+        return info_data.get("BaseModel") or info_data.get("baseModel")
 
 
 ###############
